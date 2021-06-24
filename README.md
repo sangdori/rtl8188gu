@@ -20,10 +20,10 @@ consult your distro.
 
 ### Disable CDROM mode and select in WiFi mode.
 
-> Open usb_modeswitch.rules
+Open and edit usb_modeswitch.rules
 > sudo vi /lib/udev/rules.d/40-usb_modeswitch.rules
-> 
-> Add as below
+
+Add as below
 > ATTR{idVendor}=="0bda", ATTR{idProduct}=="1a2b", RUN+="/usr/sbin/usb_modeswitch -K -v 0bda -p 1a2b"
 
 ### Known problems
