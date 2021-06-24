@@ -18,9 +18,10 @@ consult your distro.
 
 > sudo make install
 
-### Disable CDROM mode and select in WiFi mode. (not for Ubuntu 20.04)
+### Disable CDROM mode and select in WiFi mode.
 
-> eject /dev/cdrom0
+/lib/udev/rules.d/40-usb_modeswitch.rules
+> ATTR{idVendor}=="0bda", ATTR{idProduct}=="1a2b", RUN+="/usr/sbin/usb_modeswitch -K -v 0bda -p 1a2b"
 
 ### Known problems
 
